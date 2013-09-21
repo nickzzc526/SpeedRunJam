@@ -4,8 +4,8 @@ using System.Collections;
 public class Star1 : MonoBehaviour {
 	
 	Transform myStar2;
-	public float Speed = 1;
-	public float risingSpeed = 1;
+	public float Speed = 1f;
+	public float risingSpeed = 1f;
 	
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,7 @@ public class Star1 : MonoBehaviour {
 	if(Input.GetKey("right")){
 			transform.position += new Vector3(Speed,0,0);
 		}
-	if(Vector3.Distance(this.transform.position,myStar2.position)<10f){
+	if(Mathf.Abs(this.transform.position.x - myStar2.position.x)<3f){
 			transform.position += new Vector3(0,0,risingSpeed);
 		}
 	}

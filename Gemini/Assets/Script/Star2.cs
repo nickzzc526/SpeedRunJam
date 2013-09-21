@@ -20,7 +20,7 @@ public class Star2 : MonoBehaviour {
 	if(Input.GetKey(KeyCode.D)){
 			transform.position += new Vector3(Speed,0,0);
 		}
-	if(Vector3.Distance(this.transform.position,myStar1.position)<3f){
+	if(Mathf.Abs(this.transform.position.x - myStar1.position.x)<3f){
 			transform.position += new Vector3(0,0,risingSpeed);
 		}
 	}
