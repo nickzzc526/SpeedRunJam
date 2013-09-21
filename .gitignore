@@ -1,0 +1,15 @@
+# Unity3D .gitignore file.
+#     Store this file at the root of your local repository.
+*.sln
+*.userprefs
+*.csproj
+*.pidb
+*.unityproj
+.DS_Store
+/Gemini/Library/FailedAssetImports.txt
+/Gemini/Library/cache/
+/Gemini/Library/previews/
+/Gemini/Library/ScriptAssemblies
+/Gemini/Temp/
+/Gemini/Library/metadata/
+/Gemini/obj/
