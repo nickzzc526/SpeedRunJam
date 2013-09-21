@@ -20,8 +20,8 @@ public class CameraMove : MonoBehaviour {
 		
 		
 		Camera.main.orthographicSize = Vector3.Distance(char1.position,char2.position) + 3f;
-		if(Camera.main.orthographicSize < 10f){
-			Camera.main.orthographicSize = 10f;
+		if(Camera.main.orthographicSize < 20f){
+			Camera.main.orthographicSize = 20f;
 		}
 	}
 }
