@@ -30,6 +30,8 @@ public class CharMove1 : MonoBehaviour {
 	float upAc = 15f;
 	
 	float upSpeedMax = 10f;
+	float upDist = 5f;
+	float distMax = 30f;
 	
 	// Use this for initialization
 	void Start () {
@@ -108,7 +110,7 @@ public class CharMove1 : MonoBehaviour {
 		
 		//Flying and Falling
 		float dist = Mathf.Abs(myTr.position.x - otherTr.position.x);
-		if(dist < 5){
+		if(dist < upDist){
 			upSpeed += upAc * Time.deltaTime;
 		}
 		else{
@@ -126,6 +128,10 @@ public class CharMove1 : MonoBehaviour {
 		if(myTr.position.z < 0){
 			myTr.position = new Vector3(myTr.position.x,myTr.position.y,0);
 		}
-		
+		/*
+		if(myTr.position.x - otherTr.position.x > distMax){
+			myTr.position = new Vector3(otherTr.position.x + distMax,myTr.position.y,myTr.position.z);
+		}
+		*/
 	}
 }
